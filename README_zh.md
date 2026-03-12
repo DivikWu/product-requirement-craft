@@ -52,6 +52,16 @@ cp -r product-requirement-craft/.claude/skills/requirement-writer skills/
 
 或将 SKILL.md 的内容整合到你的 `.cursorrules` 文件中。
 
+### Kiro
+
+```bash
+git clone https://github.com/DivikWu/product-requirement-craft.git
+cd product-requirement-craft
+./install.sh --kiro
+```
+
+安装为 `.kiro/steering/requirement-writer.md` steering 文件，使用 `inclusion: auto` 模式，当你提到需求相关话题时 Kiro 会自动激活。
+
 ### Claude.ai
 
 从 [Releases](https://github.com/DivikWu/product-requirement-craft/releases) 下载 `requirement-writer.skill` 文件，然后：

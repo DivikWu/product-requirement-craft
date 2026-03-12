@@ -52,6 +52,16 @@ cp -r product-requirement-craft/.claude/skills/requirement-writer skills/
 
 Or integrate the SKILL.md content into your `.cursorrules` file.
 
+### Kiro
+
+```bash
+git clone https://github.com/DivikWu/product-requirement-craft.git
+cd product-requirement-craft
+./install.sh --kiro
+```
+
+Installs as a steering file at `.kiro/steering/requirement-writer.md` with `inclusion: auto`, so Kiro activates it automatically when you mention requirements-related topics.
+
 ### Claude.ai
 
 Download the `requirement-writer.skill` file from [Releases](https://github.com/DivikWu/product-requirement-craft/releases), then:
