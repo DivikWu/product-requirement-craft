@@ -56,8 +56,7 @@ Or integrate the SKILL.md content into your `.cursorrules` file.
 
 ```bash
 git clone https://github.com/DivikWu/product-requirement-craft.git
-cd product-requirement-craft
-./install.sh --kiro
+product-requirement-craft/install.sh --kiro
 ```
 
 Installs as a steering file at `.kiro/steering/requirement-writer.md` with `inclusion: auto`, so Kiro activates it automatically when you mention requirements-related topics.
