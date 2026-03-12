@@ -1,5 +1,7 @@
 # Product Requirement Craft
 
+[中文版](README_zh.md)
+
 A Claude skill that guides you through structured requirements gathering via interactive dialogue, generating **Problem Framing**, **SRD**, and **PRD** documents.
 
 ## What it does
