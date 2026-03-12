@@ -33,18 +33,18 @@ Problem Framing → SRD → PRD
 /plugin add /path/to/product-requirement-craft
 
 # Or manually — personal level (available in all projects)
-git clone https://github.com/divik-wu/product-requirement-craft.git
+git clone https://github.com/DivikWu/product-requirement-craft.git
 cp -r product-requirement-craft/.claude/skills/requirement-writer ~/.claude/skills/
 
 # Or manually — project level (current project only)
-git clone https://github.com/divik-wu/product-requirement-craft.git
+git clone https://github.com/DivikWu/product-requirement-craft.git
 cp -r product-requirement-craft/.claude/skills/requirement-writer .claude/skills/
 ```
 
 ### Cursor
 
 ```bash
-git clone https://github.com/divik-wu/product-requirement-craft.git
+git clone https://github.com/DivikWu/product-requirement-craft.git
 cp -r product-requirement-craft/.claude/skills/requirement-writer skills/
 ```
 
@@ -52,7 +52,7 @@ Or integrate the SKILL.md content into your `.cursorrules` file.
 
 ### Claude.ai
 
-Download the `requirement-writer.skill` file from [Releases](https://github.com/divik-wu/product-requirement-craft/releases), then:
+Download the `requirement-writer.skill` file from [Releases](https://github.com/DivikWu/product-requirement-craft/releases), then:
 
 **Settings → Customize → Skills → Upload**
 
