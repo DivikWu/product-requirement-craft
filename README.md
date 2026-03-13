@@ -97,8 +97,7 @@ Or invoke directly in Claude Code:
     ├── questioning-guide.md           # Questioning strategy + completeness scoring
     ├── problem-framing-template.md    # Problem Framing template + field guide
     ├── srd-template.md                # SRD template (10 sections)
-    ├── prd-template.md                # PRD template (7 sections + optional sections)
-    └── example-yami-homepage.md       # Filled-in example for quality reference
+    └── prd-template.md                # PRD template (7 sections + optional sections)
 ```
 
 ## Document frameworks at a glance

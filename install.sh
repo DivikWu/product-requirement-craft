@@ -18,7 +18,7 @@ if [ -z "$SCRIPT_DIR" ] || [ ! -f "$SOURCE_DIR/SKILL.md" ]; then
     REMOTE_MODE=true
 fi
 
-REFERENCE_FILES="questioning-guide.md problem-framing-template.md srd-template.md prd-template.md example-yami-homepage.md"
+REFERENCE_FILES="questioning-guide.md problem-framing-template.md srd-template.md prd-template.md"
 
 # Download a file from GitHub raw URL to a local path
 download_file() {
@@ -96,7 +96,11 @@ FRONTMATTER
     # Strip original YAML frontmatter from SKILL.md before appending
     awk 'BEGIN{skip=0} /^---$/{skip++; if(skip<=2) next} skip>=2{print}' "$TMPFILE" >> "$TARGET/requirement-writer.md"
     rm -f "$TMPFILE"
-    install_refs "$TARGET/references"
+    # Install only core templates (exclude examples)
+    for f in $REFERENCE_FILES; do
+        case "$f" in example-*) continue ;; esac
+        fetch_skill "references/$f" "$TARGET/references/$f"
+    done
     echo "✅ Installed to $TARGET (Kiro — current project)"
 }
 

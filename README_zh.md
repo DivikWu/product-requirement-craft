@@ -97,8 +97,7 @@ curl -fsSL https://raw.githubusercontent.com/DivikWu/product-requirement-craft/m
     ├── questioning-guide.md           # 提问策略 + 完整度评分
     ├── problem-framing-template.md    # Problem Framing 模板 + 字段指南
     ├── srd-template.md                # SRD 模板（10 个章节）
-    ├── prd-template.md                # PRD 模板（7 个章节 + 可选章节）
-    └── example-yami-homepage.md       # 填写示例，供质量参考
+    └── prd-template.md                # PRD 模板（7 个章节 + 可选章节）
 ```
 
 ## 文档框架速览
