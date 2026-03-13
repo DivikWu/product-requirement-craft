@@ -2,7 +2,7 @@
 
 # Product Requirement Craft Installer
 # Usage: ./install.sh [--project | --personal | --cursor | --kiro]
-# Remote: curl -fsSL https://raw.githubusercontent.com/DivikWu/product-requirement-craft/main/install.sh | bash -s -- --kiro
+# Remote: curl -fsSL https://raw.githubusercontent.com/DivikWu/product-requirement-craft/main/install.sh | bash -s -- <MODE>
 
 set -e
 
@@ -96,11 +96,7 @@ FRONTMATTER
     # Strip original YAML frontmatter from SKILL.md before appending
     awk 'BEGIN{skip=0} /^---$/{skip++; if(skip<=2) next} skip>=2{print}' "$TMPFILE" >> "$TARGET/requirement-writer.md"
     rm -f "$TMPFILE"
-    # Install only core templates (exclude examples)
-    for f in $REFERENCE_FILES; do
-        case "$f" in example-*) continue ;; esac
-        fetch_skill "references/$f" "$TARGET/references/$f"
-    done
+    install_refs "$TARGET/references"
     echo "✅ Installed to $TARGET (Kiro — current project)"
 }
 
@@ -133,6 +129,6 @@ case "${1:-}" in
         echo "  ./install.sh --project"
         echo ""
         echo "Remote install (no git clone needed):"
-        echo "  curl -fsSL https://raw.githubusercontent.com/DivikWu/product-requirement-craft/main/install.sh | bash -s -- --kiro"
+        echo "  curl -fsSL https://raw.githubusercontent.com/DivikWu/product-requirement-craft/main/install.sh | bash -s -- <MODE>"
         ;;
 esac

@@ -14,7 +14,7 @@ A Claude Code skill (requirement-writer) that generates Problem Framing, SRD, an
     └── prd-template.md
 
 skills/requirement-writer/           # Mirror for Cursor compatibility
-install.sh                           # Installer script (--personal / --project / --cursor)
+install.sh                           # Installer script (--personal / --project / --cursor / --kiro)
 ```
 
 ## Global rules
@@ -33,7 +33,7 @@ install.sh                           # Installer script (--personal / --project 
 - SKILL.md should stay concise (~130 lines). Put detailed content in `references/` files.
 - Follow Anthropic's skill authoring best practices: progressive disclosure, imperative instructions, concise by default.
 - When modifying templates, preserve section numbering — downstream logic references sections by number (e.g., PRD §4.0).
-- The `install.sh` script copies from `.claude/skills/`; test all three modes (--personal, --project, --cursor) after structural changes.
+- The `install.sh` script copies from `.claude/skills/`; test all four modes (--personal, --project, --cursor, --kiro) after structural changes.
 
 ## Bilingual docs
 

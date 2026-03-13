@@ -103,7 +103,8 @@ structural accuracy (long conversations may push earlier context out of window):
 - SRD → re-read `references/srd-template.md`
 - PRD → re-read `references/prd-template.md`
 
-Generate as Markdown file. Save to `/mnt/user-data/outputs/`.
+Generate as Markdown file. In Claude.ai, save to `/mnt/user-data/outputs/`.
+In IDE environments (Claude Code, Cursor, Kiro), save to `docs/` in the project root.
 
 Document language: match the user's conversation language.
 For sections with insufficient information, mark as `> ⚠️ TBD — 待补充`.
@@ -124,5 +125,5 @@ Present findings as a brief checklist. Ask if user wants to supplement.
 - Which sections are thinnest and why
 - What questions could have been asked earlier to get better information
 
-In IDE environments (Claude Code), append retrospective to `docs/requirement-reviews.md`.
+In IDE environments (Claude Code, Cursor, Kiro), append retrospective to `docs/review-log.md`.
 In Claude.ai, output in conversation for the user to reference.
