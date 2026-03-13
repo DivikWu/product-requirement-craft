@@ -27,27 +27,26 @@ Problem Framing → SRD → PRD
 
 ## Installation
 
+All modes support **one-line remote install** (no git clone needed):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/DivikWu/product-requirement-craft/main/install.sh | bash -s -- <MODE>
+```
+
 ### Claude Code
 
 ```bash
-# Via plugin (recommended)
-# In Claude Code, run:
-/plugin add /path/to/product-requirement-craft
+# One-line install — personal (all projects)
+curl -fsSL https://raw.githubusercontent.com/DivikWu/product-requirement-craft/main/install.sh | bash -s -- --personal
 
-# Or manually — personal level (available in all projects)
-git clone https://github.com/DivikWu/product-requirement-craft.git
-cp -r product-requirement-craft/.claude/skills/requirement-writer ~/.claude/skills/
-
-# Or manually — project level (current project only)
-git clone https://github.com/DivikWu/product-requirement-craft.git
-cp -r product-requirement-craft/.claude/skills/requirement-writer .claude/skills/
+# One-line install — project (current project only)
+curl -fsSL https://raw.githubusercontent.com/DivikWu/product-requirement-craft/main/install.sh | bash -s -- --project
 ```
 
 ### Cursor
 
 ```bash
-git clone https://github.com/DivikWu/product-requirement-craft.git
-cp -r product-requirement-craft/.claude/skills/requirement-writer skills/
+curl -fsSL https://raw.githubusercontent.com/DivikWu/product-requirement-craft/main/install.sh | bash -s -- --cursor
 ```
 
 Or integrate the SKILL.md content into your `.cursorrules` file.
@@ -55,8 +54,7 @@ Or integrate the SKILL.md content into your `.cursorrules` file.
 ### Kiro
 
 ```bash
-git clone https://github.com/DivikWu/product-requirement-craft.git
-product-requirement-craft/install.sh --kiro
+curl -fsSL https://raw.githubusercontent.com/DivikWu/product-requirement-craft/main/install.sh | bash -s -- --kiro
 ```
 
 Installs as a steering file at `.kiro/steering/requirement-writer.md` with `inclusion: auto`, so Kiro activates it automatically when you mention requirements-related topics.

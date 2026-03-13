@@ -27,27 +27,26 @@ Problem Framing → SRD → PRD
 
 ## 安装
 
+所有模式均支持**一行远程安装**（无需 git clone）：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/DivikWu/product-requirement-craft/main/install.sh | bash -s -- <模式>
+```
+
 ### Claude Code
 
 ```bash
-# 通过插件安装（推荐）
-# 在 Claude Code 中运行：
-/plugin add /path/to/product-requirement-craft
+# 一行安装 — 个人级别（所有项目可用）
+curl -fsSL https://raw.githubusercontent.com/DivikWu/product-requirement-craft/main/install.sh | bash -s -- --personal
 
-# 或手动安装 — 个人级别（所有项目可用）
-git clone https://github.com/DivikWu/product-requirement-craft.git
-cp -r product-requirement-craft/.claude/skills/requirement-writer ~/.claude/skills/
-
-# 或手动安装 — 项目级别（仅当前项目）
-git clone https://github.com/DivikWu/product-requirement-craft.git
-cp -r product-requirement-craft/.claude/skills/requirement-writer .claude/skills/
+# 一行安装 — 项目级别（仅当前项目）
+curl -fsSL https://raw.githubusercontent.com/DivikWu/product-requirement-craft/main/install.sh | bash -s -- --project
 ```
 
 ### Cursor
 
 ```bash
-git clone https://github.com/DivikWu/product-requirement-craft.git
-cp -r product-requirement-craft/.claude/skills/requirement-writer skills/
+curl -fsSL https://raw.githubusercontent.com/DivikWu/product-requirement-craft/main/install.sh | bash -s -- --cursor
 ```
 
 或将 SKILL.md 的内容整合到你的 `.cursorrules` 文件中。
@@ -55,8 +54,7 @@ cp -r product-requirement-craft/.claude/skills/requirement-writer skills/
 ### Kiro
 
 ```bash
-git clone https://github.com/DivikWu/product-requirement-craft.git
-product-requirement-craft/install.sh --kiro
+curl -fsSL https://raw.githubusercontent.com/DivikWu/product-requirement-craft/main/install.sh | bash -s -- --kiro
 ```
 
 安装为 `.kiro/steering/requirement-writer.md` steering 文件，使用 `inclusion: auto` 模式，当你提到需求相关话题时 Kiro 会自动激活。
